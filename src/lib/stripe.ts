@@ -1,5 +1,5 @@
 import Stripe from "stripe";
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2024-12-18.acacia",
-});
+// apiVersion volontairement omis : le SDK utilise sa version par defaut,
+// ce qui evite les erreurs de type quand Stripe met a jour ses versions.
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
