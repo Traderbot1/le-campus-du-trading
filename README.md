@@ -11,7 +11,7 @@ Next.js + Supabase (comptes + base + stockage video) + Stripe (paiement 995 €)
 - Suivi de progression : reprise a la seconde pres + lecons terminees + %
 
 ---
-
+ 
 ## MISE EN LIGNE — a suivre dans l'ordre
 
 ### 1. Mettre le code sur GitHub
