@@ -32,7 +32,7 @@ export default function Home() {
       {/* NAV */}
       <header className="sticky top-0 z-50 bg-bg/85 backdrop-blur border-b border-line">
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-          <span className="font-extrabold metal">Le Campus du Trading</span>
+          <a href="/" className="flex items-center gap-2.5"><img src="/images/logo.png" alt="Le Campus du Trading" className="h-8 w-8" /><span className="font-extrabold metal">Le Campus du Trading</span></a>
           <nav className="hidden md:flex gap-7 text-sm text-dim">
             <a href="#methode" className="hover:text-ink">Méthode</a>
             <a href="#programme" className="hover:text-ink">Programme</a>
@@ -260,7 +260,7 @@ export default function Home() {
       </div>
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap justify-between gap-4 text-faint text-sm">
-          <span className="metal font-extrabold">Le Campus du Trading</span>
+          <span className="flex items-center gap-2"><img src="/images/logo.png" alt="" className="h-6 w-6" /><span className="metal font-extrabold">Le Campus du Trading</span></span>
           <span className="font-mono">© 2026 · Mentions légales · CGV · Confidentialité</span>
         </div>
       </footer>

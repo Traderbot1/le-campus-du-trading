@@ -22,7 +22,7 @@ export default function Signup() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-5 gap-6">
       <Link href="/" className="text-dim text-sm hover:text-ink">← Retour au site</Link>
-      <Link href="/" className="font-extrabold text-lg metal">Le Campus du Trading</Link>
+      <Link href="/" className="flex items-center gap-2.5"><img src="/images/logo.png" alt="" className="h-9 w-9" /><span className="font-extrabold text-lg metal">Le Campus du Trading</span></Link>
       <form onSubmit={submit} className="w-full max-w-sm bg-panel border border-line rounded-2xl p-8">
         <h1 className="text-2xl font-bold mb-1">Créer un compte</h1>
         <p className="text-dim text-sm mb-6">Rejoins Le Campus du Trading.</p>

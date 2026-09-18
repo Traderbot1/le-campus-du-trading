@@ -42,7 +42,7 @@ export default function Login() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-5 gap-6">
       <Link href="/" className="text-dim text-sm hover:text-ink">← Retour au site</Link>
-      <Link href="/" className="font-extrabold text-lg metal">Le Campus du Trading</Link>
+      <Link href="/" className="flex items-center gap-2.5"><img src="/images/logo.png" alt="" className="h-9 w-9" /><span className="font-extrabold text-lg metal">Le Campus du Trading</span></Link>
       <Suspense><LoginForm /></Suspense>
     </main>
   );
