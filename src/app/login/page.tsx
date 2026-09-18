@@ -22,7 +22,7 @@ function LoginForm() {
   return (
     <form onSubmit={submit} className="w-full max-w-sm bg-panel border border-line rounded-2xl p-8">
       <h1 className="text-2xl font-bold mb-1">Connexion</h1>
-      <p className="text-dim text-sm mb-6">Accede a ton espace eleve.</p>
+      <p className="text-dim text-sm mb-6">Accède à ton espace élève.</p>
       {err && <p className="text-down text-sm mb-4">{err}</p>}
       <input className="w-full mb-3 bg-bg border border-line2 rounded-lg px-4 py-3 text-sm outline-none focus:border-accent"
         type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
@@ -32,7 +32,7 @@ function LoginForm() {
         {loading ? "..." : "Se connecter"}
       </button>
       <p className="text-dim text-sm mt-5 text-center">
-        Pas encore de compte ? <Link href="/signup" className="text-accent2">Creer un compte</Link>
+        Pas encore de compte ? <Link href="/signup" className="text-accent2">Créer un compte</Link>
       </p>
     </form>
   );
@@ -40,10 +40,10 @@ function LoginForm() {
 
 export default function Login() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-5">
-      <Suspense>
-        <LoginForm />
-      </Suspense>
+    <main className="min-h-screen flex flex-col items-center justify-center px-5 gap-6">
+      <Link href="/" className="text-dim text-sm hover:text-ink">← Retour au site</Link>
+      <Link href="/" className="font-extrabold text-lg metal">Le Campus du Trading</Link>
+      <Suspense><LoginForm /></Suspense>
     </main>
   );
 }

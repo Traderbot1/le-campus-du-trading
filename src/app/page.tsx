@@ -184,17 +184,24 @@ export default function Home() {
 
       {/* INSTRUCTEUR */}
       <section className="bg-panel border-y border-line py-20">
-        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
-          <div className="bg-panel2 border border-line rounded-2xl p-8 text-center">
-            <div className="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center font-mono text-2xl text-accent2 font-semibold border border-line2" style={{ background: "linear-gradient(135deg,#2A1B4A,#140C24)" }}>CT</div>
-            <div className="font-semibold text-lg">[Ton nom]</div>
-            <div className="font-mono text-xs text-faint mt-1">Le Campus du Trading</div>
-          </div>
+        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-[0.8fr_1.2fr] gap-10 items-center">
+          <img src="/images/instructor.webp" alt="Hosni Ben Hassen" loading="lazy"
+            className="w-full max-w-sm mx-auto rounded-2xl border border-line2"
+            style={{ boxShadow: "0 40px 90px -50px rgba(124,77,255,.6)" }} />
           <div>
             <div className="font-mono text-xs text-accent2 mb-3">Ton formateur</div>
-            <h2 className="text-3xl font-extrabold mb-4">Qui t&apos;enseigne.</h2>
-            <p className="text-dim mb-3">[Ton parcours ici] — années de trading, marchés tradés, comment tu es venu à l&apos;order flow. Concret et honnête : c&apos;est ce qui crée la confiance.</p>
-            <p className="text-dim text-sm">Remplace ce bloc et l&apos;avatar par ta vraie photo et ta vraie histoire.</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-1">Hosni Ben Hassen</h2>
+            <p className="font-mono text-sm text-faint mb-5">Trader &amp; développeur de stratégies algorithmiques</p>
+            <p className="text-dim mb-5 max-w-xl">
+              Trader depuis 2016, spécialisé en order flow sur les futures ES et NQ.
+              Je développe mes propres stratégies algorithmiques sur NinjaTrader (NinjaScript),
+              et je lis le marché au quotidien avec NinjaTrader et Bookmap.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Trader depuis 2016","Futures ES & NQ","Order Flow","NinjaScript","Bookmap"].map(c => (
+                <span key={c} className="font-mono text-xs text-accent2 bg-accent/10 border border-accent/30 rounded-full px-3 py-1.5">{c}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
