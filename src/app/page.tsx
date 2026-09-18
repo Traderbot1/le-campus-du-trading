@@ -39,7 +39,7 @@ export default function Home() {
             <a href="#tarif" className="hover:text-ink">Tarif</a>
             <Link href="/login" className="hover:text-ink">Connexion</Link>
           </nav>
-          <Link href="/signup" className="bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">Accéder — 995 €</Link>
+          <Link href="/signup" className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">Accéder — 995 €</Link>
         </div>
       </header>
 
@@ -58,8 +58,8 @@ export default function Home() {
               La formation pour lire le carnet d&apos;ordres, le volume au prix et le footprint — et entrer là où les institutionnels agissent, au lieu de deviner. Sur NinjaTrader, de A à Z.
             </p>
             <div className="flex flex-wrap gap-3 mt-8">
-              <Link href="/signup" className="bg-accent text-white font-semibold rounded-lg px-6 py-3 hover:opacity-90">Accéder à la formation — 995 € ↗</Link>
-              <a href="#programme" className="border border-line2 rounded-lg px-6 py-3 font-semibold hover:border-accent">Voir les 8 modules</a>
+              <Link href="/signup" className="cta cta-pulse bg-accent text-white font-semibold rounded-lg px-6 py-3">Accéder à la formation — 995 € ↗</Link>
+              <a href="#programme" className="ghost-glow border border-line2 rounded-lg px-6 py-3 font-semibold">Voir les 8 modules</a>
             </div>
             <p className="font-mono text-xs text-faint mt-5">Accès à vie · Vidéos protégées · Paiement Stripe · ou 3× 332 €</p>
             <div className="flex gap-8 mt-7">
@@ -184,10 +184,10 @@ export default function Home() {
 
       {/* INSTRUCTEUR */}
       <section className="bg-panel border-y border-line py-20">
-        <div className="max-w-6xl mx-auto px-5 grid md:grid-cols-[0.8fr_1.2fr] gap-10 items-center">
+        <div className="max-w-4xl mx-auto px-5 flex flex-col md:flex-row items-center gap-10 text-center md:text-left">
           <img src="/images/instructor.webp" alt="Hosni Ben Hassen" loading="lazy"
-            className="w-full max-w-sm mx-auto rounded-2xl border border-line2"
-            style={{ boxShadow: "0 40px 90px -50px rgba(124,77,255,.6)" }} />
+            className="w-44 h-44 rounded-full object-cover border-2 border-accent/50 shrink-0"
+            style={{ boxShadow: "0 0 60px -12px rgba(124,77,255,.7)" }} />
           <div>
             <div className="font-mono text-xs text-accent2 mb-3">Ton formateur</div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-1">Hosni Ben Hassen</h2>
@@ -197,7 +197,7 @@ export default function Home() {
               Je développe mes propres stratégies algorithmiques sur NinjaTrader (NinjaScript),
               et je lis le marché au quotidien avec NinjaTrader et Bookmap.
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {["Trader depuis 2016","Futures ES & NQ","Order Flow","NinjaScript","Bookmap"].map(c => (
                 <span key={c} className="font-mono text-xs text-accent2 bg-accent/10 border border-accent/30 rounded-full px-3 py-1.5">{c}</span>
               ))}
@@ -225,8 +225,8 @@ export default function Home() {
                   <li key={t} className="flex gap-2"><span className="text-accent2">✓</span>{t}</li>
                 ))}
               </ul>
-              <Link href="/signup" className="block text-center bg-accent text-white font-semibold rounded-lg py-4 hover:opacity-90">Accéder à la formation — 995 € ↗</Link>
-              <p className="text-center font-mono text-xs text-faint mt-4">[Garantie — à définir selon ta politique]</p>
+              <Link href="/signup" className="cta cta-pulse block text-center bg-accent text-white font-semibold rounded-lg py-4">Accéder à la formation — 995 € ↗</Link>
+              <p className="text-center font-mono text-xs text-faint mt-4">Paiement 100% sécurisé par Stripe · Accès immédiat et à vie</p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function Home() {
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap justify-between gap-4 text-faint text-sm">
           <span className="flex items-center gap-2"><img src="/images/logo.png" alt="" className="h-6 w-6" /><span className="metal font-extrabold">Le Campus du Trading</span></span>
-          <span className="font-mono">© 2026 · Mentions légales · CGV · Confidentialité</span>
+          <span className="font-mono flex flex-wrap gap-x-4 gap-y-1">© 2026 Le Campus du Trading <Link href="/mentions-legales" className="hover:text-ink">Mentions légales</Link> <Link href="/cgv" className="hover:text-ink">CGV</Link> <Link href="/confidentialite" className="hover:text-ink">Confidentialité</Link></span>
         </div>
       </footer>
     </main>
