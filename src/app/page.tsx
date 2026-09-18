@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { MODULES } from "@/lib/curriculum";
-
-const TICK = ["ES 5 412.25 ▲","NQ 19 204.5 ▲","CL 78.42 ▼","POC 5 408.00","VAH 5 421 · VAL 5 395","DELTA +12 480","ABSORPTION 5 396"];
+import LiveTicker from "@/components/LiveTicker";
 
 const SHOTS = [
   { src: "/images/tpo.webp", t: "TPO / Market Profile", d: "Zones de valeur : TPO VAH, POC et VAL identifiés sur la séance." },
@@ -22,12 +21,8 @@ const OUTS = [
 export default function Home() {
   return (
     <main>
-      {/* TICKER */}
-      <div className="border-b border-line bg-[#06040C] overflow-hidden">
-        <div className="tape-track py-2 font-mono text-xs text-dim">
-          {[...TICK, ...TICK].map((s, i) => <span key={i} className="mx-5">{s}</span>)}
-        </div>
-      </div>
+      {/* TICKER LIVE */}
+      <LiveTicker />
 
       {/* NAV */}
       <header className="sticky top-0 z-50 bg-bg/85 backdrop-blur border-b border-line">
