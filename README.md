@@ -75,7 +75,7 @@ NEXT_PUBLIC_SITE_URL           = https://lecampusdutrading.fr
 - Passe Stripe en **live** quand tout est bon.
 
 ---
-
+ 
 ## Local (optionnel, pour tester sur ton PC)
 ```
 npm install
