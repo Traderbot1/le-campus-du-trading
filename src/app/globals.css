@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --accent:#7C4DFF; --accent2:#A78BFA;
+}
+html{scroll-behavior:smooth}
+body{background:#08060F;color:#F2F0F8}
+.metal{
+  color:#E7E9F0;
+  background:linear-gradient(180deg,#FFFFFF 0%,#D6D9E6 42%,#8F94AC 62%,#C6CAD8 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
