@@ -12,24 +12,29 @@ function LoginForm() {
 
   async function submit(e: React.FormEvent) {
     e.preventDefault(); setErr(""); setLoading(true);
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({ email, password: pw });
-    setLoading(false);
-    if (error) return setErr("Email ou mot de passe incorrect.");
-    router.push(next); router.refresh();
+    try {
+      const supabase = createClient();
+      const { error } = await supabase.auth.signInWithPassword({ email, password: pw });
+      if (error) { setErr(error.message); return; }
+      router.push(next); router.refresh();
+    } catch (e: unknown) {
+      setErr("Erreur de connexion : " + (e instanceof Error ? e.message : "réessaie."));
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
     <form onSubmit={submit} className="w-full max-w-sm bg-panel border border-line rounded-2xl p-8">
       <h1 className="text-2xl font-bold mb-1">Connexion</h1>
       <p className="text-dim text-sm mb-6">Accède à ton espace élève.</p>
-      {err && <p className="text-down text-sm mb-4">{err}</p>}
+      {err && <p className="text-down text-sm mb-4 bg-down/10 border border-down/30 rounded-lg px-3 py-2">{err}</p>}
       <input className="w-full mb-3 bg-bg border border-line2 rounded-lg px-4 py-3 text-sm outline-none focus:border-accent"
         type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
       <input className="w-full mb-5 bg-bg border border-line2 rounded-lg px-4 py-3 text-sm outline-none focus:border-accent"
         type="password" placeholder="Mot de passe" value={pw} onChange={e=>setPw(e.target.value)} required />
       <button disabled={loading} className="w-full bg-accent text-white font-semibold rounded-lg py-3 hover:opacity-90 disabled:opacity-60">
-        {loading ? "..." : "Se connecter"}
+        {loading ? "Connexion..." : "Se connecter"}
       </button>
       <p className="text-dim text-sm mt-5 text-center">
         Pas encore de compte ? <Link href="/signup" className="text-accent2">Créer un compte</Link>
