@@ -258,7 +258,7 @@ export default async function Home() {
         <div className="text-center mb-8">
           <div className="font-mono text-xs text-accent2 mb-3">Contact</div>
           <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Une question avant de te lancer ?</h2>
-          <p className="text-dim">Écris-nous, on te répond rapidement. Ou directement à <a href="mailto:contact@skykraken.fr" className="text-accent2">contact@skykraken.fr</a>.</p>
+          <p className="text-dim">Écris-nous, on te répond rapidement. Ou directement à <a href="mailto:contact@lecampusdutrading.fr" className="text-accent2">contact@lecampusdutrading.fr</a>.</p>
         </div>
         <ContactForm />
       </section>
