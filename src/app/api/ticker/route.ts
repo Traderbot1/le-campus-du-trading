@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 // Indices/actions/or liquides (proxys de l'ES/NQ, dispo en temps reel sur le plan gratuit Finnhub)
 const SYMS: [string, string][] = [
-  ["SPY", "S&P 500"], ["QQQ", "NASDAQ"], ["DIA", "DOW"], ["IWM", "RUSSELL"],
+  ["SPY", "SPY"], ["QQQ", "QQQ"], ["DIA", "DIA"], ["IWM", "IWM"],
   ["NVDA", "NVDA"], ["AAPL", "AAPL"], ["TSLA", "TSLA"], ["MSFT", "MSFT"],
-  ["GLD", "GOLD"], ["AMZN", "AMZN"],
+  ["GLD", "GLD"], ["AMZN", "AMZN"], ["META", "META"], ["AMD", "AMD"],
 ];
 
 let cache: { t: number; data: unknown[] } = { t: 0, data: [] };

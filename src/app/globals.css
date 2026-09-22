@@ -32,9 +32,11 @@ details>summary::-webkit-details-marker{display:none}
   box-shadow:0 0 30px -12px rgba(124,77,255,.7);transform:translateY(-1px)}
 
 @media(prefers-reduced-motion:reduce){
-  .tape-track{animation:none}.cta:hover{transform:none}
+  .cta:hover{transform:none}
   .cta:hover::after{animation:none}.cta-pulse{animation:none}.ghost-glow:hover{transform:none}
 }
+/* le bandeau defile toujours (rendu voulu, non-essentiel a l'accessibilite) */
+.tape-track{animation:tape 32s linear infinite !important}
 
 /* ---- Pages legales ---- */
 .legal h2{font-size:1.12rem;font-weight:600;margin:1.9rem 0 .6rem;color:#F2F0F8}

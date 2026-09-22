@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 type Item = { label: string; price: number; change: number; pct: number };
 
 const FALLBACK: Item[] = [
-  { label: "S&P 500", price: 5412.25, change: 12.5, pct: 0.23 },
-  { label: "NASDAQ", price: 19204.5, change: 44.2, pct: 0.23 },
-  { label: "DOW", price: 41230, change: -60, pct: -0.15 },
-  { label: "GOLD", price: 2410, change: 8, pct: 0.33 },
-  { label: "NVDA", price: 142.3, change: 1.8, pct: 1.28 },
+  { label: "SPY", price: 773.66, change: 0.15, pct: 0.02 },
+  { label: "QQQ", price: 745.32, change: 3.9, pct: 0.52 },
+  { label: "NVDA", price: 228.87, change: 1.5, pct: 0.66 },
+  { label: "AAPL", price: 342.58, change: 3.6, pct: 1.06 },
+  { label: "GLD", price: 397.9, change: -0.48, pct: -0.12 },
 ];
 
 const fmt = (n: number) => (n ?? 0).toLocaleString("fr-FR", { maximumFractionDigits: 2 });
