@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MODULES } from "@/lib/curriculum";
 import LiveTicker from "@/components/LiveTicker";
+import { createClient } from "@/lib/supabase/server";
 
 const SHOTS = [
   { src: "/images/tpo.webp", t: "TPO / Market Profile", d: "Zones de valeur : TPO VAH, POC et VAL identifiés sur la séance." },
@@ -18,7 +19,10 @@ const OUTS = [
   { n: "06", t: "Exécuter avec un plan", d: "Setups sur zones, routine, scénario et discipline." },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const isAuthed = !!user;
   return (
     <main>
       {/* TICKER LIVE */}
@@ -32,9 +36,9 @@ export default function Home() {
             <a href="#methode" className="hover:text-ink">Méthode</a>
             <a href="#programme" className="hover:text-ink">Programme</a>
             <a href="#tarif" className="hover:text-ink">Tarif</a>
-            <Link href="/login" className="hover:text-ink">Connexion</Link>
+            {isAuthed ? <Link href="/dashboard" className="hover:text-ink">Mon espace</Link> : <Link href="/login" className="hover:text-ink">Connexion</Link>}
           </nav>
-          <Link href="/signup" className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">Accéder — 995 €</Link>
+          <Link href={isAuthed ? "/dashboard" : "/signup"} className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">{isAuthed ? "Mon espace" : "Accéder — 995 €"}</Link>
         </div>
       </header>
 

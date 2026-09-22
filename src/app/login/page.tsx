@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { frError } from "@/lib/authErrors";
@@ -11,6 +11,11 @@ function LoginForm() {
   const [email, setEmail] = useState(""); const [pw, setPw] = useState("");
   const [show, setShow] = useState(false);
   const [err, setErr] = useState(""); const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getSession().then(({ data }) => { if (data.session) router.replace("/dashboard"); });
+  }, [router]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault(); setErr(""); setLoading(true);
