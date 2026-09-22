@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MODULES } from "@/lib/curriculum";
 import LiveTicker from "@/components/LiveTicker";
 import { createClient } from "@/lib/supabase/server";
+import ContactForm from "@/components/ContactForm";
 
 const SHOTS = [
   { src: "/images/tpo.webp", t: "TPO / Market Profile", d: "Zones de valeur : TPO VAH, POC et VAL identifiés sur la séance." },
@@ -36,6 +37,7 @@ export default async function Home() {
             <a href="#methode" className="hover:text-ink">Méthode</a>
             <a href="#programme" className="hover:text-ink">Programme</a>
             <a href="#tarif" className="hover:text-ink">Tarif</a>
+            <a href="#contact" className="hover:text-ink">Contact</a>
             {isAuthed ? <Link href="/dashboard" className="hover:text-ink">Mon espace</Link> : <Link href="/login" className="hover:text-ink">Connexion</Link>}
           </nav>
           <Link href={isAuthed ? "/dashboard" : "/signup"} className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">{isAuthed ? "Mon espace" : "Accéder — 995 €"}</Link>
@@ -249,6 +251,16 @@ export default async function Home() {
             </details>
           ))}
         </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="max-w-3xl mx-auto px-5 py-20">
+        <div className="text-center mb-8">
+          <div className="font-mono text-xs text-accent2 mb-3">Contact</div>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-3">Une question avant de te lancer ?</h2>
+          <p className="text-dim">Écris-nous, on te répond rapidement. Ou directement à <a href="mailto:contact@skykraken.fr" className="text-accent2">contact@skykraken.fr</a>.</p>
+        </div>
+        <ContactForm />
       </section>
 
       {/* DISCLAIMER + FOOTER */}
