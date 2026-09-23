@@ -40,7 +40,7 @@ export default async function Home() {
             <a href="#contact" className="hover:text-ink">Contact</a>
             {isAuthed ? <Link href="/dashboard" className="hover:text-ink">Mon espace</Link> : <Link href="/login" className="hover:text-ink">Connexion</Link>}
           </nav>
-          <Link href={isAuthed ? "/dashboard" : "/signup"} className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">{isAuthed ? "Mon espace" : "Accéder — 995 €"}</Link>
+          <div className="flex items-center gap-3"><a href="https://www.youtube.com/@Lecampusdutrading" target="_blank" rel="noopener" aria-label="YouTube" className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-line2 hover:border-[#FF0000] transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.3 3.5-6.3 3.5z"/></svg></a><Link href={isAuthed ? "/dashboard" : "/signup"} className="cta bg-accent text-white text-sm font-semibold rounded-lg px-4 py-2">{isAuthed ? "Mon espace" : "Accéder — 995 €"}</Link></div>
         </div>
       </header>
 
@@ -204,8 +204,10 @@ export default async function Home() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-5">
-              <a href="https://www.youtube.com/@Lecampusdutrading" target="_blank" rel="noopener" className="ghost-glow inline-flex items-center gap-2 border border-line2 rounded-lg px-4 py-2 text-sm font-medium">▶ YouTube</a>
-              <a href="https://www.linkedin.com/in/hosni-ben-hassen-266ba1198/" target="_blank" rel="noopener" className="ghost-glow inline-flex items-center gap-2 border border-line2 rounded-lg px-4 py-2 text-sm font-medium">in LinkedIn</a>
+              <a href="https://www.linkedin.com/in/hosni-ben-hassen-266ba1198/" target="_blank" rel="noopener" className="ghost-glow inline-flex items-center gap-2 border border-line2 rounded-lg px-4 py-2 text-sm font-medium">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
