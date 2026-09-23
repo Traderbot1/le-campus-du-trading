@@ -203,6 +203,10 @@ export default async function Home() {
                 <span key={c} className="font-mono text-xs text-accent2 bg-accent/10 border border-accent/30 rounded-full px-3 py-1.5">{c}</span>
               ))}
             </div>
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-5">
+              <a href="https://www.youtube.com/@Lecampusdutrading" target="_blank" rel="noopener" className="ghost-glow inline-flex items-center gap-2 border border-line2 rounded-lg px-4 py-2 text-sm font-medium">▶ YouTube</a>
+              <a href="https://www.linkedin.com/in/hosni-ben-hassen-266ba1198/" target="_blank" rel="noopener" className="ghost-glow inline-flex items-center gap-2 border border-line2 rounded-lg px-4 py-2 text-sm font-medium">in LinkedIn</a>
+            </div>
           </div>
         </div>
       </section>
@@ -272,6 +276,10 @@ export default async function Home() {
       <footer className="py-10">
         <div className="max-w-6xl mx-auto px-5 flex flex-wrap justify-between gap-4 text-faint text-sm">
           <span className="flex items-center gap-2"><img src="/images/logo.png" alt="" className="h-6 w-6" /><span className="metal font-extrabold">Le Campus du Trading</span></span>
+    <span className="flex gap-4">
+      <a href="https://www.youtube.com/@Lecampusdutrading" target="_blank" rel="noopener" className="hover:text-ink">YouTube</a>
+      <a href="https://www.linkedin.com/in/hosni-ben-hassen-266ba1198/" target="_blank" rel="noopener" className="hover:text-ink">LinkedIn</a>
+    </span>
           <span className="font-mono flex flex-wrap gap-x-4 gap-y-1">© 2026 Le Campus du Trading <Link href="/mentions-legales" className="hover:text-ink">Mentions légales</Link> <Link href="/cgv" className="hover:text-ink">CGV</Link> <Link href="/confidentialite" className="hover:text-ink">Confidentialité</Link></span>
         </div>
       </footer>
